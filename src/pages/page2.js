@@ -19,21 +19,21 @@ const page2 = () => {
       }),
       El({
         element: "div",
-        className: "mt-[200px]",
+        className: "flex justify-start flex-col absolute bottom-[74px] w-[364px] gap-4 font-bold",
         children: [
           El({
             element: "p",
-            className: "",
+            className: "text-[40px] text-start",
             children: ["welcome to 👋"],
           }),
           El({
             element: "p",
-            className: "",
+            className: "text-7xl text-start",
             children: ["Shoea"],
           }),
           El({
             element: "p",
-            className: "",
+            className: "text-base text-start mt-2.5",
             children: [
               "The best sneakers & shoes e-commerse app of the century for your fashion needs!",
             ],
