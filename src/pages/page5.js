@@ -1,7 +1,7 @@
 import { El } from "../el/el";
 import { router } from "../routes/router";
 
-const page3 = () => {
+const page4 = () => {
   return El({
     element: "div",
     className:
@@ -10,17 +10,16 @@ const page3 = () => {
       El({
         element: "img",
         className: " h-[657px] absolute top-0",
-        src: "../../src/images/onboarding/page3.jfif",
+        src: "../../src/images/onboarding/page4.jfif",
       }),
       El({
         element: "div",
-        className:
-          "bg-[#fcfcfc] h-[324px] absolute bottom-0 flex flex-col items-center",
+        className: "bg-[#fcfcfc] h-[324px] absolute bottom-0 flex flex-col items-center",
         children: [
           El({
             element: "p",
             className: "text-[32px] text-black font-bold mt-8",
-            children: ["We provide high quality products just for you"],
+            children: ["Your satisfaction is our number one periority"],
           }),
           El({
             element: "div",
@@ -28,11 +27,11 @@ const page3 = () => {
             children: [
               El({
                 element: "img",
-                src: "../../src/images/liner/bold-liner.png",
+                src: "../../src/images/liner/liner.png",
               }),
               El({
                 element: "img",
-                src: "../../src/images/liner/liner.png",
+                src: "../../src/images/liner/bold-liner.png",
               }),
               El({
                 element: "img",
@@ -42,17 +41,16 @@ const page3 = () => {
           }),
           El({
             element: "button",
-            className:
-              "w-[380px] h-[47px] rounded-[30px] bg-[#212529] absolute bottom-[32px]",
+            className: "w-[380px] h-[47px] rounded-[30px] bg-[#212529] absolute bottom-[32px]",
             children: "Next",
             onclick: () => {
-              router.navigate("/page4");
+            router().navigate("/page5");
             },
-          }),
+          })
         ],
       }),
     ],
   });
 };
 
-export default page3;
+export default page4;
