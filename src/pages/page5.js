@@ -14,11 +14,13 @@ const page5 = () => {
       }),
       El({
         element: "div",
-        className: "bg-[#fcfcfc] h-[324px] absolute bottom-0 flex flex-col items-center",
+        className:
+          "bg-[#fcfcfc] h-[324px] absolute bottom-0 flex flex-col items-center",
         children: [
           El({
             element: "p",
-            className: "text-[32px] text-black font-bold mt-8 ml-[24px] mr-[24px]",
+            className:
+              "text-[32px] text-black font-bold mt-8 ml-[24px] mr-[24px]",
             children: ["Let’s fulfill your fashion needs with shoearight now!"],
           }),
           El({
@@ -41,12 +43,13 @@ const page5 = () => {
           }),
           El({
             element: "button",
-            className: "w-[380px] h-[47px] rounded-[30px] bg-[#212529] absolute bottom-[32px]",
+            className:
+              "w-[380px] h-[47px] rounded-[30px] bg-[#212529] absolute bottom-[32px]",
             children: "Get Startedt",
             // onclick: () => {
             // router().navigate("/page5");
             // },
-          })
+          }),
         ],
       }),
     ],

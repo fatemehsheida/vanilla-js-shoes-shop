@@ -19,7 +19,8 @@ const page3 = () => {
         children: [
           El({
             element: "p",
-            className: "text-[32px] text-black font-bold mt-8 ml-[24px] mr-[24px]",
+            className:
+              "text-[32px] text-black font-bold mt-8 ml-[24px] mr-[24px]",
             children: ["We provide high quality products just for you"],
           }),
           El({

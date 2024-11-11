@@ -13,6 +13,7 @@ const changeContents = (target) => {
 };
 
 router
+//router onboarding
   .on("/", () => {
     changeContents(header);
   })

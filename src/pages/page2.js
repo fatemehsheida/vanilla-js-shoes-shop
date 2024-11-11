@@ -2,9 +2,9 @@ import { El } from "../el/el";
 import { router } from "../routes/router";
 
 const page2 = () => {
-    setTimeout(() => {
-      router.navigate ("/page3");
-    }, 8000);
+  setTimeout(() => {
+    router.navigate("/page3");
+  }, 8000);
   return El({
     element: "div",
     id: "welcome",
