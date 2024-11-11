@@ -18,7 +18,7 @@ const page4 = () => {
         children: [
           El({
             element: "p",
-            className: "text-[32px] text-black font-bold mt-8",
+            className: "text-[32px] text-black font-bold mt-8 ml-[24px] mr-[24px]",
             children: ["Your satisfaction is our number one periority"],
           }),
           El({
@@ -44,7 +44,7 @@ const page4 = () => {
             className: "w-[380px] h-[47px] rounded-[30px] bg-[#212529] absolute bottom-[32px]",
             children: "Next",
             onclick: () => {
-            router().navigate("/page5");
+            router.navigate("/page5");
             },
           })
         ],

@@ -1,7 +1,7 @@
 import { El } from "../el/el";
 import { router } from "../routes/router";
 
-const page4 = () => {
+const page5 = () => {
   return El({
     element: "div",
     className:
@@ -10,7 +10,7 @@ const page4 = () => {
       El({
         element: "img",
         className: " h-[657px] absolute top-0",
-        src: "../../src/images/onboarding/page4.jfif",
+        src: "../../src/images/onboarding/page5.jfif",
       }),
       El({
         element: "div",
@@ -18,8 +18,8 @@ const page4 = () => {
         children: [
           El({
             element: "p",
-            className: "text-[32px] text-black font-bold mt-8",
-            children: ["Your satisfaction is our number one periority"],
+            className: "text-[32px] text-black font-bold mt-8 ml-[24px] mr-[24px]",
+            children: ["Let’s fulfill your fashion needs with shoearight now!"],
           }),
           El({
             element: "div",
@@ -31,21 +31,21 @@ const page4 = () => {
               }),
               El({
                 element: "img",
-                src: "../../src/images/liner/bold-liner.png",
+                src: "../../src/images/liner/liner.png",
               }),
               El({
                 element: "img",
-                src: "../../src/images/liner/liner.png",
+                src: "../../src/images/liner/bold-liner.png",
               }),
             ],
           }),
           El({
             element: "button",
             className: "w-[380px] h-[47px] rounded-[30px] bg-[#212529] absolute bottom-[32px]",
-            children: "Next",
-            onclick: () => {
-            router().navigate("/page5");
-            },
+            children: "Get Startedt",
+            // onclick: () => {
+            // router().navigate("/page5");
+            // },
           })
         ],
       }),
@@ -53,4 +53,4 @@ const page4 = () => {
   });
 };
 
-export default page4;
+export default page5;
