@@ -2,10 +2,9 @@ import { El } from "../el/el";
 import { router } from "../routes/router";
 
 const page2 = () => {
-  // setTimeout(() => {
-  // router.navigate("/welcome");
-  // // console.log("settimeout");
-  // }, 3000);
+    setTimeout(() => {
+      router.navigate ("/page3");
+    }, 8000);
   return El({
     element: "div",
     id: "welcome",
@@ -19,7 +18,8 @@ const page2 = () => {
       }),
       El({
         element: "div",
-        className: "flex justify-start flex-col absolute bottom-[74px] w-[364px] gap-4 font-bold",
+        className:
+          "flex justify-start flex-col absolute bottom-[74px] w-[364px] gap-4 font-bold",
         children: [
           El({
             element: "p",
