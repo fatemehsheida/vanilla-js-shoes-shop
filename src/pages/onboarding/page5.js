@@ -1,5 +1,5 @@
-import { El } from "../el/el";
-import { router } from "../routes/router";
+import { El } from "../../el/el";
+import { router } from "../../routes/router";
 
 const page5 = () => {
   return El({
@@ -10,7 +10,7 @@ const page5 = () => {
       El({
         element: "img",
         className: " h-[657px] absolute top-0",
-        src: "../../src/images/onboarding/page5.jfif",
+        src: "../../../src/images/onboarding/page5.jfif",
       }),
       El({
         element: "div",
@@ -29,15 +29,15 @@ const page5 = () => {
             children: [
               El({
                 element: "img",
-                src: "../../src/images/liner/liner.png",
+                src: "../../../src/images/liner/liner.png",
               }),
               El({
                 element: "img",
-                src: "../../src/images/liner/liner.png",
+                src: "../../../src/images/liner/liner.png",
               }),
               El({
                 element: "img",
-                src: "../../src/images/liner/bold-liner.png",
+                src: "../../../src/images/liner/bold-liner.png",
               }),
             ],
           }),
@@ -46,9 +46,9 @@ const page5 = () => {
             className:
               "w-[380px] h-[47px] rounded-[30px] bg-[#212529] absolute bottom-[32px]",
             children: "Get Startedt",
-            // onclick: () => {
-            // router().navigate("/page5");
-            // },
+            onclick: () => {
+            router.navigate("/login");
+            },
           }),
         ],
       }),

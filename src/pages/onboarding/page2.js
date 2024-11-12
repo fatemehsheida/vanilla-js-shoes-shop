@@ -1,5 +1,5 @@
-import { El } from "../el/el";
-import { router } from "../routes/router";
+import { El } from "../../el/el";
+import { router } from "../../routes/router";
 
 const page2 = () => {
   setTimeout(() => {
@@ -9,12 +9,12 @@ const page2 = () => {
     element: "div",
     id: "welcome",
     className:
-      "bg-[url('../../src/images/onboarding/back-ground-page-one.jpg')] z-10 w-[428px] h-[926px] flex flex-col justify-between items-center relative",
+      "bg-[url('../../../src/images/onboarding/back-ground-page-one.jpg')] z-10 w-[428px] h-[926px] flex flex-col justify-between items-center relative",
     children: [
       El({
         element: "img",
         className: " w-[741px] h-[926px] absolute top-0 left-0",
-        src: "../../src/images/onboarding/gradiant.png",
+        src: "../../../src/images/onboarding/gradiant.png",
       }),
       El({
         element: "div",

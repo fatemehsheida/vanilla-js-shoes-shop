@@ -1,5 +1,5 @@
-import { El } from "../el/el";
-import { router } from "../routes/router";
+import { El } from "../../el/el";
+import { router } from "../../routes/router";
 
 const page3 = () => {
   return El({
@@ -10,7 +10,7 @@ const page3 = () => {
       El({
         element: "img",
         className: " h-[657px] absolute top-0",
-        src: "../../src/images/onboarding/page3.jfif",
+        src: "../../../src/images/onboarding/page3.jfif",
       }),
       El({
         element: "div",
@@ -29,15 +29,15 @@ const page3 = () => {
             children: [
               El({
                 element: "img",
-                src: "../../src/images/liner/bold-liner.png",
+                src: "../../../src/images/liner/bold-liner.png",
               }),
               El({
                 element: "img",
-                src: "../../src/images/liner/liner.png",
+                src: "../../../src/images/liner/liner.png",
               }),
               El({
                 element: "img",
-                src: "../../src/images/liner/liner.png",
+                src: "../../../src/images/liner/liner.png",
               }),
             ],
           }),

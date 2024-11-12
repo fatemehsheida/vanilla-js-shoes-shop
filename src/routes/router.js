@@ -1,9 +1,16 @@
 import Navigo from "navigo";
-import header from "../pages/page1";
-import page2 from "../pages/page2";
-import page3 from "../pages/page3";
-import page4 from "../pages/page4";
-import page5 from "../pages/page5";
+
+//import onboarding
+import header from "../pages/onboarding/page1";
+import page2 from "../pages/onboarding/page2";
+import page3 from "../pages/onboarding/page3";
+import page4 from "../pages/onboarding/page4";
+import page5 from "../pages/onboarding/page5";
+
+//import loading
+import login from "../pages/login/login";
+
+
 export const router = new Navigo("/");
 
 const changeContents = (target) => {
@@ -32,4 +39,10 @@ router
 
   .on("/page5", () => {
     changeContents(page5);
+  })
+
+
+  //router login
+  .on("/login", () => {
+    changeContents(login);
   });
