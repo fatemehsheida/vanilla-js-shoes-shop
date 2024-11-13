@@ -10,6 +10,8 @@ import page5 from "../pages/onboarding/page5";
 //import loading
 import login from "../pages/login/login";
 
+//import home
+import home1 from "../pages/home/home1";
 
 export const router = new Navigo("/");
 
@@ -20,7 +22,7 @@ const changeContents = (target) => {
 };
 
 router
-//router onboarding
+  //router onboarding
   .on("/", () => {
     changeContents(header);
   })
@@ -41,8 +43,12 @@ router
     changeContents(page5);
   })
 
-
   //router login
   .on("/login", () => {
     changeContents(login);
+  })
+
+  //router home
+  .on("/home1", () => {
+    changeContents(home1);
   });
