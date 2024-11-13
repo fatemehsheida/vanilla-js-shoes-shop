@@ -1,8 +1,7 @@
 import "./src/index.css";
 import { App } from "./src/App.js";
 import { router } from "./src/routes/router.js";
-import home1 from "./src/pages/home/home1";
+import Home from "./src/pages/home/home1.js";
 
-const root = document.getElementById("app");
-root.appendChild(App());
+const root = document.getElementById("app")?. root.appendChild(Home());
 router.resolve();

@@ -1,5 +1,5 @@
 export async function getProductList() {
-    const response = await fetch("http://localhost:5000/products");
-    const product = response.json();
-    return product;
+    const response = await fetch("http://localhost:3000/Products");
+    const data = await response.json();
+    return data;
 }
