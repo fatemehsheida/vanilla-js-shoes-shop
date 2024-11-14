@@ -20,6 +20,13 @@ const changeContents = (target) => {
   root.innerHTML = "";
   root.append(target());
 };
+const changeContents2 = (target, item) => {
+  target(item).then((res) => {
+  const root = document.getElementById("rootsEl");
+  root.innerHTML = "";
+  root.append(res);
+  });
+  };
 
 router
   //router onboarding
@@ -50,5 +57,5 @@ router
 
   //router home
   .on("/home", () => {
-    changeContents(home);
+    changeContents2(home);
   });

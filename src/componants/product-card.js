@@ -1,10 +1,16 @@
 import { El } from "../el/el";
 
 
-export function productCard(products){
-    return El("article",{
-        className: "",
-        children: [],
+export function productCard(product){
+    return El({
+        element: "div",
+        className: "product-card",
+        children: [
+            El({
+                element: "img",
+                src: "http://localhost:5173/products/adidas/1.webp"
+            })
+        ],
     }
     )
 }
