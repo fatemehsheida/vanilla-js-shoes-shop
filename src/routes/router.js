@@ -11,7 +11,7 @@ import page5 from "../pages/onboarding/page5";
 import login from "../pages/login/login";
 
 //import home
-import home1 from "../pages/home/home1";
+import home from "../pages/home/home";
 
 export const router = new Navigo("/");
 
@@ -49,6 +49,6 @@ router
   })
 
   //router home
-  .on("/home1", () => {
-    changeContents(home1);
+  .on("/home", () => {
+    changeContents(home);
   });

@@ -88,7 +88,7 @@ const login = () => {
                 type: "submit",
                 children: "Sing in",
                 onclick: () => {
-                  router.navigate("/home1");
+                  router.navigate("/home");
                   },
               }),
             ],
