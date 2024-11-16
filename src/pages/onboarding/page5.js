@@ -47,7 +47,7 @@ const page5 = () => {
               "w-[380px] h-[47px] rounded-[30px] bg-[#212529] absolute bottom-[32px]",
             children: "Get Startedt",
             onclick: () => {
-            router.navigate("/home");
+            router.navigate("/login");
             },
           }),
         ],
