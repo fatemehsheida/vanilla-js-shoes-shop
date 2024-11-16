@@ -1,52 +1,22 @@
-import { El } from "../../el/el";
-import { getProductList } from "../../api/products.api";
-import { productCard } from "../../componants/product-card";
-import { router } from "../../routes/router";
+import { ce } from "../Utils/create-element.js";
+import searchInput from "../components/searchInput.js";
+import fetchAllLogo from "./fetchLogo.js";
+import most from "./homeMostNav.js";
+import fetchAllProducts from "./fetchAllProducts.js";
+import footer from "./footer.js";
 
-export default async function Home() {
-  const productWrapper = El({
+export default function home(data = {}) {
+  let home = ce({
     element: "div",
-    className: "flex  w-[428px] bg-[#fcfcfc]",
+    className:
+      " homeContainer px-6 flex flex-col justify-center items-center relative",
     children: [
-      El({
-        element: "div",
-        children: [
-          El({
-            element: "div",
-            children: [
-              El({
-                element: "img",
-                className: "w-[48px] h-[48px] bg-black rounded-full",
-                src: "../../../src/images/assets/1-1.png",
-              }),
-              El({
-                element: "h2",
-                className: "text-black",
-                children: ["Good Morning 👋"],
-              }),
-              El({
-                element: "h2",
-                className: "text-black",
-                children: ["Saeed Abdilar"],
-              }),    
-            ],
-          })
-        ],
-      }),
+      searchInput(),
+      fetchAllLogo(),
+      most(),
+      fetchAllProducts(data),
+      footer(),
     ],
   });
-  let productElement = [];
-  let products = await getProductList();
-  products.forEach((product) => {
-    let card = productCard(product);
-    productElement.push(card);
-  });
-  let home = El({ element: "div", children: [productWrapper, ...productElement] });
   return home;
 }
-async function renderHomePage() {
-  const homeElement = await Home();
-  render(homeElement);
-}
-
-renderHomePage();

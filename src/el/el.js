@@ -1,22 +1,19 @@
-export function El({ element, children, eventListener, dataset, ...rest }) {
-    const elem = document.createElement(element);
-    for (const attr in rest) {
-    elem[attr] = rest[attr];
+export function ce(name, {className = "", children = [], events = {}, restAttrs = {},innerText}={}) {
+    const element = document.createElement(name);
+    if (className) {
+        element.className = className;
     }
-    if (children) {
-    for (const child of children) {
-    elem.append(child);
+    Object.keys(events).forEach(eventKey => {
+        element.addEventListener(eventKey, events[eventKey]);
+    });
+    children.forEach(child => {
+        element.append(child);
+    });
+    Object.keys(restAttrs).forEach(restAttrsKey => {
+        element.setAttribute(restAttrsKey, restAttrs[restAttrsKey]);
+    });
+    if(innerText){
+        element.innerText=innerText;
     }
-    }
-    if (eventListener) {
-    eventListener.map((el) => elem.addEventListener(el.event, el.callback));
-    }
-    if (dataset) {
-    for (const key in dataset) {
-    elem.dataset[key] = dataset[key];
-    }
-    }
-    return elem;
-    }
-    
-    
+    return element;
+}

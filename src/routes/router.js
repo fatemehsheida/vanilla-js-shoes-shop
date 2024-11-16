@@ -11,7 +11,7 @@ import page5 from "../pages/onboarding/page5";
 import login from "../pages/login/login";
 
 //import home
-import home from "../pages/home/home";
+import home from "../pages/home/homeMostNav";
 
 export const router = new Navigo("/");
 
