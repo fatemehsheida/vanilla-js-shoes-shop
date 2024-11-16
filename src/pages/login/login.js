@@ -1,5 +1,5 @@
-import { El } from "../../el/el";
-import { router } from "../../routes/router";
+import { El } from "../../utils/el";
+import { router } from "../../utils/router";
 
 const login = () => {
     // setTimeout(() => {
@@ -82,8 +82,7 @@ const login = () => {
                   }),
                 ],
               }),
-              El({
-                element: "button",
+              El("button",{
                 className: "bg-[#212529] text-white w-[380px] h-[47px] rounded-[30px] font-bold absolute bottom-[32px]",
                 type: "submit",
                 children: "Sing in",

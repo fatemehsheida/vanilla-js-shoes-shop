@@ -1,5 +1,5 @@
-import { El } from "../../el/el";
-import { router } from "../../routes/router";
+import { El } from "../../utils/el";
+import { router } from "../../utils/router";
 
 const header = () => {
   setTimeout(() => {
