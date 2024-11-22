@@ -1,8 +1,11 @@
-import "./src/index.css";
-import { App } from "./src/App.js";
-import { router } from "./src/routes/router.js";
-import home1 from "./src/pages/home/home1";
+import onboardingPage4 from "../pages/onboarding-page-4.js";
+import onboardingPage5 from "../pages/onboarding-page-5.js";
+import login from "../pages/login.js";
+import home from "../pages/home.js";
+import getProduct from "../api/products.api.js";
 
-const root = document.getElementById("app");
-root.appendChild(App());
-router.resolve();
+
+let welcome = fe("welcome");
+welcome.className = "w-full h-dvh";
+welcome.appendChild(login());
+welcome.appendChild(home());
