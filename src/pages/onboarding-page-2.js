@@ -1,5 +1,9 @@
 import { ce } from "../Utils/create-element.js";
+import {router} from "../routes/router.js";
 export default function wel2() {
+    setTimeout(()=>{
+        router.navigate("/page3")
+    },3000);
   const wel2 = ce("div", {
     restAttrs: { id: "unboarding-page-1" },
     className:
