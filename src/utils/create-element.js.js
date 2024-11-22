@@ -18,6 +18,5 @@ export function ce(
   if (innerText) {
     element.innerText = innerText;
   }
-
   return element;
 }
