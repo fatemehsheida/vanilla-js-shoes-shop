@@ -10,8 +10,11 @@ export default function logo() {
         children: [
           ce("img", {
             restAttrs: { src: "./src/assets/image/logo.png" },
+<<<<<<< HEAD
 
             
+=======
+>>>>>>> welcome
             className: "w-[26.54px] h-[39.93px]",
           }),
         ],
@@ -19,7 +22,10 @@ export default function logo() {
       ce("h1", { innerText: "Shoea", className: "text-[52px] font-bold " }),
     ],
   });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> welcome
   return logo;
 }
