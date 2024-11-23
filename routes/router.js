@@ -19,7 +19,7 @@ export const router = new Navigo("/");
 const changeContents = (data, data) => {
   const root = fe("rootsEl");
   root.innerHTML = "";
-  root.append(data(data));
+  root.append(page(data));
 };
 const changeContents2 = (page, data) => {
   page(data).then((response) => {
