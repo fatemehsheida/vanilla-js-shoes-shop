@@ -4,7 +4,7 @@ import fetchAllLogo from "./fetchLogo.js";
 import most from "./homeMostNav.js";
 import fetchAllProducts from "./fetchAllProducts.js";
 import footer from "./footer.js";
-export default function home() {
+export default function home(data = {}) {
   let home = ce("div", {
     className:
       " homeContainer px-6 flex flex-col justify-center items-center relative",
@@ -12,7 +12,7 @@ export default function home() {
       searchInput(),
       fetchAllLogo(),
       most(),
-      fetchAllProducts(),
+      fetchAllProducts(data),
       footer(),
     ],
   });

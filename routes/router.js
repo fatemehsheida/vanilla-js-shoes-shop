@@ -48,6 +48,9 @@ router
     changeContents(login);
   })
   //router home
+  .on("/home/:brand", (params) => {
+    changeContents(home, params);
+  })
   .on("/home", () => {
     changeContents(home);
   })
