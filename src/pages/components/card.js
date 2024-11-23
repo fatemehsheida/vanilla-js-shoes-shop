@@ -1,4 +1,11 @@
 import { ce } from "../Utils/create-element.js";
+import { router } from "../routes/router.js";
+
+function showCardDetail(e) {
+  let endpoint = e.target.id.toString();
+  router.navigate(`card/${endpoint}`);
+}
+
 export default function cardElement(product) {
   let card = ce("div", {
     className:
@@ -9,8 +16,11 @@ export default function cardElement(product) {
           "imageContainer w-full h-44 rounded-3xl p-5 bg-[#ECEFF1] flex justify-center items-center",
         children: [
           ce("img", {
-            restAttrs: { src: product.images },
+            restAttrs: { src: product.images, id: product.id },
             className: "w-36 h-36",
+            events: {
+              click: showCardDetail,
+            },
           }),
         ],
       }),
