@@ -1,4 +1,4 @@
-import { ce } from "../Utils/create-element.js";
+import { ce } from "../../Utils/create-element.js.js";
 
 export default function btn() {
   const btn = ce("button", {
