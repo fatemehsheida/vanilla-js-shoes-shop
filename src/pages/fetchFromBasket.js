@@ -8,12 +8,12 @@ import paymentCart from "../components/paymentcrat.js";
 export default function fetchCardFromBasket() {
   let basketCardsContainer = ce("div", {
     className:
-      " w-full h-5/8 flex flex-col gap-4 mt-5 overflow-y-scroll overflow-x-hidden",
+      " w-full h-5/8 flex flex-col h-full justify-start gap-4 mt-5 overflow-y-scroll overflow-x-hidden",
   });
   fetchFromBasket().then((products) => {
     products.forEach((productss) => {
       let product = productss["0"];
-      let basketCard = cardElementPayment(product,productss);
+      let basketCard = cardElementPayment(product, productss);
       basketCardsContainer.appendChild(basketCard);
     });
   });
