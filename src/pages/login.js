@@ -5,9 +5,27 @@ import { router } from "../routes/router.js";
 function signIn() {
   let userEmail = fe("userEmail").value;
   let userPassword = fe("userPassword").value;
-  let data = JSON.parse(localStorage.getItem("user"));
+  let data = JSON.parse(localStorage.getItem('user'));
   if (data.email == userEmail && data.password == userPassword) {
     router.navigate("/home");
+    fetch("http://localhost:5173/userEntry").then(res => {
+      res.json().then(res2=>{
+          res2.forEach(obj=>{
+              fetch(`http://localhost:5173/userEntry/${obj.id}`, {
+                  method: 'PUT',
+                  headers: {
+                      'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({
+                      id: obj.id,
+                      entry:(obj.entry)+1
+                  })
+              })
+                  .then(response => response.json())
+                  .then(data => console.log(data))
+          })
+      })
+  });
   }
 }
 
