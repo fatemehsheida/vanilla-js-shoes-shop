@@ -1,4 +1,8 @@
 import { ce } from "../Utils/create-element.js";
+import { router } from "../routes/router";
+function toNextPage() {
+  router.navigate("/page5");
+}
 
 export default function onboardingPage4() {
   const login = ce("div", {
@@ -50,6 +54,9 @@ export default function onboardingPage4() {
             className:
               "w-full h-12 bg-black text-white text-sm font-medium px-4 py-3 rounded-[30px]",
             innerText: "Next",
+            events: {
+              click: toNextPage,
+            },
           }),
         ],
       }),
