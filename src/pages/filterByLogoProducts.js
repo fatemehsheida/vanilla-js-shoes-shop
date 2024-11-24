@@ -2,6 +2,7 @@ import { ce } from "../Utils/create-element.js";
 import fetchAdiddasProducts from "./fetchAdiddasProducts.js";
 import { router } from "../routes/router.js";
 
+
 export default function productFilterByLogo({ data }) {
   let product = ce("div", {
     className:
