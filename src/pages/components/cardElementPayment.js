@@ -69,7 +69,7 @@ export default function cardElementPayment(product,productss) {
               ce("div", {
                 children: [
                   ce("h5", {
-                    innerText: `Size=${"number"}`,
+                    innerText: `Size=${product.size}`,
                   }),
                 ],
               }),
