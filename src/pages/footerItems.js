@@ -1,4 +1,13 @@
 import { ce } from "../Utils/create-element.js";
+import { router } from "../routes/router.js";
+
+function routeToOwnPage(e) {
+  let path = e.target.className;
+  let path2 = path.split(" ")[1];
+  let path3 = path2.split("-").at(-1);
+  router.navigate(`/${path3}`);
+}
+
 export default function footerItems(item) {
   let footerItem = ce("div", {
     className:
@@ -12,6 +21,10 @@ export default function footerItems(item) {
         className: "text-xs font-semibold leading-3 ",
       }),
     ],
+
+    events: {
+      click: routeToOwnPage,
+    },
   });
   return footerItem;
 }
