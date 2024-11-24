@@ -4,11 +4,16 @@ import fetchAllLogo from "./fetchLogo.js";
 import most from "./homeMostNav.js";
 import fetchAllProducts from "./fetchAllProducts.js";
 import footer from "./footer.js";
+import header from "./header.js";
+
+
+
 export default function home(data = {}) {
   let home = ce("div", {
     className:
       " homeContainer px-6 flex flex-col justify-center items-center relative",
     children: [
+      header(),
       searchInput(),
       fetchAllLogo(),
       most(),
