@@ -1,6 +1,7 @@
 import { ce } from "../Utils/create-element.js";
 import cardElement from "../components/card.js";
 import getAdiddasProductsList from "../api/addidas.api.js";
+import clog from "../Utils/logdata.js";
 
 export default function fetchAdiddasProducts(endpoint) {
   let home = ce("div", {

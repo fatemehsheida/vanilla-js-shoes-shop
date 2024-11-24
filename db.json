@@ -634,5 +634,6 @@
       "icon": "fa-solid fa-user",
       "iconActive": "fa-solid fa-user"
     }
-  ]
+  ],
+  "basket": []
 }
