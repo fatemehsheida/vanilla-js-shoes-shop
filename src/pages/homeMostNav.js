@@ -2,11 +2,11 @@ import { ce } from "../Utils/create-element.js";
 import getProductsLogo from "../api/logo.api.js";
 import logoElements from "./components/logoElements.js";
 import navbarTitle from "./components/navbarTitle.js";
-import {router} from "../routes/router.js";
-function allProductsByTitle(e){
-    e.target.className+="bg-[#343A40] text-white";
-    let endpoint=e.target.innerText.toLowerCase();
-    router.navigate(`home/${endpoint}`);
+import { router } from "../routes/router.js";
+function allProductsByTitle(e) {
+  e.target.className += "bg-[#343A40] text-white";
+  let endpoint = e.target.innerText.toLowerCase();
+  router.navigate(`home/${endpoint}`);
 }
 
 export default function most() {
@@ -39,10 +39,10 @@ export default function most() {
         children: [
           ce("h1", {
             innerText: "All",
-            className:"font-semibold leading-5 text-base cursor-pointer",
-                        events:{
-                            "click":allProductsByTitle
-                        }
+            className: "font-semibold leading-5 text-base ",
+            events: {
+              click: allProductsByTitle,
+            },
           }),
         ],
       }),

@@ -2,8 +2,7 @@ import { ce } from "../Utils/create-element.js";
 import fetchAdiddasProducts from "./fetchAdiddasProducts.js";
 import { router } from "../routes/router.js";
 
-export default async function productFilterByLogo({ data }) {
-  console.log(data);
+export default function productFilterByLogo({ data }) {
   let product = ce("div", {
     className:
       " container w-full h-full px-6 flex flex-col justify-start items-center",
