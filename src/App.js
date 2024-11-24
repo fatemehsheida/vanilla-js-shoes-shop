@@ -1,10 +1,9 @@
-import { El } from "./el/el";
-
+import { ce } from "./Utils/create-element.js";
 export const App = () => {
-return El({
-element: "div",
-id: "rootsEl",
-className: "flex flex-col",
-children: [""],
-});
+  let a = ce("div", {
+    restAttrs: { id: "rootsEl" },
+    className: " w-full h-full flex flex-col",
+    children: [""],
+  });
+  return a;
 };
