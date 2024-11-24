@@ -1205,6 +1205,25 @@
       "icon": "fa-solid fa-user",
       "iconActive": "fa-solid fa-user"
     }
+  ],
+  "basket": [
+    {
+      "0": {
+        "id": "2",
+        "title": "adidas",
+        "price": 145,
+        "order": 0,
+        "size": [
+          40
+        ],
+        "color": [
+          "rose"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/2.webp"
+      },
+      "id": "4162"
+    }
   ]
 }
 

@@ -4,7 +4,7 @@ import { router } from "../routes/router.js";
 
 export default async function productFilterByLogo({ data }) {
   console.log(data);
-  let product = await ce("div", {
+  let product = ce("div", {
     className:
       " container w-full h-full px-6 flex flex-col justify-start items-center",
     children: [
