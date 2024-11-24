@@ -13,7 +13,7 @@ export default function cardElement(product) {
     children: [
       ce("div", {
         className:
-          "imageContainer w-full h-44 rounded-3xl p-5 bg-[#ECEFF1] flex justify-center items-center",
+          "imageContainer w-full h-44 rounded-3xl p-5 bg-[#ECEFF1] flex justify-center items-center cursor-pointer hover:bg-slate-200",
         children: [
           ce("img", {
             restAttrs: { src: product.images, id: product.id },
