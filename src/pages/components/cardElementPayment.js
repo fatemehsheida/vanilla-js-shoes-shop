@@ -1,5 +1,8 @@
 import { ce } from "../Utils/create-element.js";
 import { router } from "../routes/router.js";
+import fetchFromBasket from "../api/basket.api.js";
+import clog from "../Utils/logdata.js";
+
 function showCardDetail(e) {
   let endpoint = e.target.id.toString();
   router.navigate(`card/${endpoint}`);
