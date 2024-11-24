@@ -1,15 +1,5 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "name": "Your Name",
-        "email": "Your Email",
-        "password": "Your Password",
-        "cart": [],
-        "orders": [],
-        "wishlist": []
-      }
-    ],
+
     "Products": [
       {
         "id": 1,
@@ -570,6 +560,13 @@
         "brand": "reebok",
         "images": "http://localhost:5173/products/reebok/8.webp"
       }
-    ]
+    ],
+    "userEntry": [
+    {
+      "id": "1",
+      "entry": 2
+    }
+  ]
+
   }
   
