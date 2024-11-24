@@ -1,27 +1,8 @@
 import { ce } from "../Utils/create-element.js";
 import { router } from "../routes/router.js";
 import fetchFromBasket from "../api/basket.api.js";
-import clog from "../Utils/logdata.js";
-import deleteData from "../Utils/deleteData.js";
 import fe from "../Utils/findElements.js";
-import confirmationDeleteCard from "./confirmationDeleteCard.js";
-
-//function for showing card detail
-function showCardDetail(e, products) {
-  let endpoint = e.target.id.toString();
-  router.navigate(`card/${endpoint}`);
-}
-//function for delete the card from db and dont shown in this page
-// function deleteCard(e) {
-//   let endpoint = e.target.id.toString();
-//   fetchFromBasket(endpoint).then((products) => {
-//     let product = products["0"];
-//     clog(product);
-//   });
-//   // deleteData(endpoint);
-//   // location.reload();
-// }
-
+import deleteData from "../Utils/deleteData.js";
 function deleteCard(e) {
   const endpoint = e.target.id.toString();
   fetchFromBasket(endpoint).then((products) => {
@@ -68,22 +49,18 @@ function deleteCard(e) {
     });
     //for showing confarmation----------------------------
     document.body.appendChild(confirmationDialog);
-
-
-  
-   // مدیریت دکمه‌ها
-   fe("cancel-btn").addEventListener("click", () => {
-    confirmationDialog.remove(); // حذف دیالوگ در صورت کلیک روی Cancel
-  });
-  fe("confirm-btn").addEventListener("click", () => {
-    // اگر کاربر تایید کرد، حذف داده
-    deleteData(endpoint); // فراخوانی تابع حذف
-    location.reload(); // رفرش صفحه
+    // مدیریت دکمه‌ها
+    fe("cancel-btn").addEventListener("click", () => {
+      confirmationDialog.remove(); // حذف دیالوگ در صورت کلیک روی Cancel
+    });
+    fe("confirm-btn").addEventListener("click", () => {
+      // اگر کاربر تایید کرد، حذف داده
+      deleteData(endpoint); // فراخوانی تابع حذف
+      location.reload(); // رفرش صفحه
     });
   });
 }
-
-//function for shown selected color
+//function for shown selected color----------------------------
 function returnColor(product) {
   let color = "";
   product.color.forEach((element) => {
@@ -113,10 +90,7 @@ export default function cardElementPayment(product, productss) {
         children: [
           ce("img", {
             restAttrs: { src: product.images, id: product.id },
-            className: "w-36 h-36",
-            events: {
-              click: showCardDetail,
-            },
+            className: `w-36 h-36 `,
           }),
         ],
       }),
@@ -130,14 +104,6 @@ export default function cardElementPayment(product, productss) {
               ce("h1", {
                 className: "productName font-bold text-2xl leading-6 ",
                 innerText: product.title,
-              }),
-              ce("i", {
-                className:
-                  "fa-solid fa-trash text-xl cursor-pointer hover:text-red-600",
-                restAttrs: { id: productss.id },
-                events: {
-                  click: deleteCard,
-                },
               }),
             ],
           }),
