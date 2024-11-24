@@ -17,7 +17,7 @@ import fetchCardDetail from "../pages/fetchCardDetail";
 import payment from "../pages/payment.js";
 
 export const router = new Navigo("/");
-const changeContents = (data, data) => {
+const changeContents3 = (data, data) => {
   const root = fe("rootsEl");
   root.innerHTML = "";
   if (data) {
@@ -25,6 +25,13 @@ const changeContents = (data, data) => {
   }
   root.append(page());
 };
+
+const changeContents = (page, data) => {
+  const root = fe("rootsEl");
+  root.innerHTML = "";
+  root.append(page(data));
+};
+
 const changeContents2 = (page, data) => {
   page(data).then((response) => {
     const root = document.getElementById("rootsEl");
@@ -54,6 +61,7 @@ router
     changeContents(login);
   })
   //router home
+
   .on("/home/:brand", (params) => {
     changeContents(home, params);
   })
@@ -70,6 +78,9 @@ router
     changeContents(fetchCardDetail, params);
   })
 
-  .on("/test3", () => {
+  .on("/bag", () => {
     changeContents(payment);
+  })
+  .on("/user", () => {
+    changeContents(login);
   });
