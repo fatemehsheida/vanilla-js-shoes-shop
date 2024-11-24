@@ -2,15 +2,21 @@ import { ce } from "../Utils/create-element.js";
 import { router } from "../routes/router.js";
 import fetchFromBasket from "../api/basket.api.js";
 import clog from "../Utils/logdata.js";
+import deleteData from "../Utils/deleteData.js";
 
-function showCardDetail(e) {
+function showCardDetail(e,products) {
   let endpoint = e.target.id.toString();
   router.navigate(`card/${endpoint}`);
 }
-export default function cardElementPayment(product) {
+function deleteCard(e){
+  let endpoint=(e.target.id).toString();
+  deleteData(endpoint);
+  location.reload();
+}
+export default function cardElementPayment(product,productss) {
   let card = ce("div", {
     className:
-      " w-96 h-44 p-3 rounded-xl bg-white flex flex-row justify-center items-start gap-3 ",
+      " w-full h-44 p-3 rounded-xl bg-white flex flex-row justify-center items-start gap-3 ",
     children: [
       ce("div", {
         className:
@@ -37,7 +43,11 @@ export default function cardElementPayment(product) {
                 innerText: product.title,
               }),
               ce("i", {
-                className: "fa-solid fa-trash text-xl",
+                className: "fa-solid fa-trash text-xl cursor-pointer hover:text-red-600",
+                restAttrs:{id:productss.id
+                }  ,  events: {
+                  click: deleteCard,
+                },
               }),
             ],
           }),
