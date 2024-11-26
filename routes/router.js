@@ -22,6 +22,10 @@ import shippingAdressPage from "../pages/checkout/shippingAdress.js";
 import checkoutBeforePay from "../pages/checkout/checkout-before-pay.js";
 import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
 import cardElementWishList from "../pages/WishList/cardElementWishList.js";
+import MostPopularpage from "../pages/Mostpage.js";
+import EmptyOrderPage from "../pages/Orders/EmptyOrderPage.js";
+import cardActiveOrder from "../components/cardActiveOrder.js";
+import cardCompletedOrder from "../components/cardCompletedOrder.js";
 
 
 export const router = new Navigo("/");
@@ -109,6 +113,21 @@ router
   })
   .on("/paymentMethod", () => {
     changeContents(paymentMethodPage);
+  })
+  .on("/MostPopularpage", () => {
+    changeContents(MostPopularpage);
+  })
+  .on("/MostPopularpage/:brand", (params) => {
+    changeContents(MostPopularpage, params);
+  })
+  .on("/EmptyOrderPage", () => {
+    changeContents(EmptyOrderPage);
+  })
+  .on("/cardActiveOrder", () => {
+    changeContents(cardActiveOrder);
+  })
+  .on("/cardCompletedOrder", () => {
+    changeContents(cardCompletedOrder);
   })
   .on("/cardElementWishList", () => {
     changeContents(cardElementWishList);
