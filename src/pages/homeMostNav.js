@@ -22,8 +22,14 @@ export default function most() {
             innerText: "Most Popular",
           }),
           ce("h1", {
-            className: "font-semibold leading-5 text-lg",
+            className:
+              "font-semibold MostPopularpage cursor-pointer leading-5 text-lg hover:text-slate-500",
             innerText: "See All",
+            events:{
+              click: () => {
+                router.navigate("/MostPopularpage");
+              },
+            }
           }),
         ],
       }),
@@ -35,7 +41,7 @@ export default function most() {
     children: [
       ce("div", {
         className:
-          "h-10 flex justify-center items-center px-5 py-2.5 border-2 border-[#343A40] bg-[#343A40] rounded-3xl text-white ",
+          "h-10 cursor-pointer flex justify-center items-center px-5 py-2.5 border-2 border-[#343A40] bg-[#343A40] rounded-3xl text-white ",
         children: [
           ce("h1", {
             innerText: "All",
