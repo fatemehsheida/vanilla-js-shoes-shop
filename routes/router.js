@@ -19,6 +19,7 @@ import ordersPage from "../pages/Orders/orders-page.js";
 import fetchCardFromBasket from "../pages/fetchFromBasket.js";
 import checkout from "../pages/checkout/checkout.js";
 import shippingAdressPage from "../pages/checkout/shippingAdress.js";
+import checkoutBeforePay from "../pages/checkout/checkout-before-pay.js";
 
 export const router = new Navigo("/");
 const changeContents3 = (data, data) => {
@@ -96,4 +97,10 @@ router
   })
   .on("/shippingAdress", () => {
     changeContents(shippingAdressPage);
+  })
+  .on("/shippingType", () => {
+    changeContents(shippingTypePage);
+  })
+  .on("/checkoutPay", () => {
+    changeContents(checkoutBeforePay);
   });

@@ -1,17 +1,18 @@
+import choosedShippingTypeNav from "../../components/checkout/checkout-choosedSheepType";
 import header from "../../components/checkout/checkout-header";
 import orderList from "../../components/checkout/checkout-orderList";
-import { ce } from "../../Utils/create-element";
 import shipingAddressNav from "../../components/checkout/checkout-shipping";
 import shippingTypeNav from "../../components/checkout/checkout-shippingType";
-
-export default function checkout() {
+import { ce } from "../../Utils/create-element";
+import clog from "../../Utils/logdata";
+export default function checkoutBeforePay() {
   let checkout2 = ce("div", {
     className: "w-full h-screen flex flex-col px-6 justify-around ",
     children: [
       header("checkout", true),
       shipingAddressNav(),
       orderList(),
-      shippingTypeNav(),
+      choosedShippingTypeNav(),
       ce("button", {
         innerText: "countinue to Payment",
         className:
