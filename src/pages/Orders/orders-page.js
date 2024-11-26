@@ -21,6 +21,26 @@ function checkDataBase() {
   return checkDataBase;
 }
 
+function checkDataBase() {
+  let test = ce("div", {
+    className: "w-full h-full ",
+  });
+  fetch("http://localhost:5173/basket")
+    .then((res) => res.json())
+    .then((data) => {
+      if (data && Object.keys(data).length === 0) {
+        test.append(EmptyOrderPage());
+      } else {
+        data.forEach((products) => {
+          let product = products[0];
+          test.append(cardActiveOrder(product, products));
+        });
+      }
+    });
+  return test;
+}
+
+
 export default function ordersPage() {
   //div contain hole page of orders
   let ordersPage = ce("div", {
