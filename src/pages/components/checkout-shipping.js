@@ -1,7 +1,7 @@
 import { ce } from "../../Utils/create-element";
 import { router } from "../../routes/router";
 
-export default function shipingNav(title = true, text = "home") {
+export default function shipingAddressNav(title = true, text = "home") {
   //events
   function goToShipping() {
     router.navigate("/shippingAdress");

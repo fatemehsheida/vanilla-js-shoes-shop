@@ -9,7 +9,7 @@ export default function orderList() {
     router.navigate("/cart");
   }
   let main = ce("div", {
-    className: "w-full  h-1/5 ",
+    className: "w-full ",
     children: [
       ce("h1", {
         className: "font-bold text-lg mb-3 ",
