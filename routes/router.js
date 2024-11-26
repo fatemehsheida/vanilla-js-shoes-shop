@@ -21,6 +21,8 @@ import checkout from "../pages/checkout/checkout.js";
 import shippingAdressPage from "../pages/checkout/shippingAdress.js";
 import checkoutBeforePay from "../pages/checkout/checkout-before-pay.js";
 import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
+import cardElementWishList from "../pages/WishList/cardElementWishList.js";
+
 
 export const router = new Navigo("/");
 const changeContents3 = (data, data) => {
@@ -107,4 +109,7 @@ router
   })
   .on("/paymentMethod", () => {
     changeContents(paymentMethodPage);
+  })
+  .on("/cardElementWishList", () => {
+    changeContents(cardElementWishList);
   });
