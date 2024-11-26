@@ -23,7 +23,7 @@ function checkDataBase() {
 
 function checkDataBase() {
   let test = ce("div", {
-    className: "w-full h-full ",
+    className: "w-full h-full bg-slate-50",
   });
   fetch("http://localhost:5173/basket")
     .then((res) => res.json())
