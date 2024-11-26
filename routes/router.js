@@ -16,6 +16,16 @@ import fetchCardByImage from "../api/fetchCardByImage.js";
 import fetchCardDetail from "../pages/fetchCardDetail";
 import payment from "../pages/payment.js";
 import ordersPage from "../pages/Orders/orders-page.js";
+import fetchCardFromBasket from "../pages/fetchFromBasket.js";
+import checkout from "../pages/checkout/checkout.js";
+import shippingAdressPage from "../pages/checkout/shippingAdress.js";
+import checkoutBeforePay from "../pages/checkout/checkout-before-pay.js";
+import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
+import MostPopularpage from "../pages/Mostpage.js";
+import EmptyOrderPage from "../pages/Orders/EmptyOrderPage.js";
+import cardActiveOrder from "../components/cardActiveOrder.js";
+import cardCompletedOrder from "../components/cardCompletedOrder.js";
+// import cardElementWishList from "../pages/WishList/cardElementWishList.js"
 
 export const router = new Navigo("/");
 const changeContents3 = (data, data) => {
@@ -87,4 +97,37 @@ router
   })
   .on("/cart", () => {
     changeContents(ordersPage);
+  })
+  .on("/checkout", () => {
+    changeContents(checkout);
+  })
+  .on("/shippingAdress", () => {
+    changeContents(shippingAdressPage);
+  })
+  .on("/shippingType", () => {
+    changeContents(shippingTypePage);
+  })
+  .on("/checkoutPay", () => {
+    changeContents(checkoutBeforePay);
+  })
+  .on("/paymentMethod", () => {
+    changeContents(paymentMethodPage);
+  })
+  .on("/MostPopularpage", () => {
+    changeContents(MostPopularpage);
+  })
+  .on("/MostPopularpage/:brand", (params) => {
+    changeContents(MostPopularpage, params);
+  })
+  .on("/EmptyOrderPage", () => {
+    changeContents(EmptyOrderPage);
+  })
+  .on("/cardActiveOrder", () => {
+    changeContents(cardActiveOrder);
+  })
+  .on("/cardCompletedOrder", () => {
+    changeContents(cardCompletedOrder);
+  })
+  .on("/cardElementWishList", () => {
+    changeContents(cardElementWishList);
   });
