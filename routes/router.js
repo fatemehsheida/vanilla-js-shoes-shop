@@ -21,11 +21,12 @@ import checkout from "../pages/checkout/checkout.js";
 import shippingAdressPage from "../pages/checkout/shippingAdress.js";
 import checkoutBeforePay from "../pages/checkout/checkout-before-pay.js";
 import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
+import cardElementWishList from "../pages/WishList/cardElementWishList.js";
 import MostPopularpage from "../pages/Mostpage.js";
 import EmptyOrderPage from "../pages/Orders/EmptyOrderPage.js";
 import cardActiveOrder from "../components/cardActiveOrder.js";
 import cardCompletedOrder from "../components/cardCompletedOrder.js";
-// import cardElementWishList from "../pages/WishList/cardElementWishList.js"
+
 
 export const router = new Navigo("/");
 const changeContents3 = (data, data) => {
