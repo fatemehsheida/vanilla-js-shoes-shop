@@ -1,9 +1,14 @@
 import { ce } from "../../Utils/create-element";
 import { router } from "../../routes/router";
 
-export default function header(text, more = false) {
+export default function header(
+  text,
+  more = false,
+  icon = "fa-solid fa-ellipsis",
+  routerr = "checkout"
+) {
   function backToCheckout() {
-    router.navigate("/checkout");
+    router.navigate(`/${routerr}`);
   }
   if (more == true) {
     let header = ce("div", {
