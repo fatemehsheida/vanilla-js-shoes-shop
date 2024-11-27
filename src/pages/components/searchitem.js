@@ -2,7 +2,7 @@ import { ce } from "../Utils/create-element.js";
 export default function searchItem(str) {
   let searchitem = ce("div", {
     className:
-      "w-full h-1/8  flex flex-row justify-between items-center gap-1 pt-5",
+      "w-full h-1/8 cursor-pointer flex flex-row justify-between items-center gap-1 pt-5",
     children: [
       ce("div", {
         className: "flex flex-row gap-5",

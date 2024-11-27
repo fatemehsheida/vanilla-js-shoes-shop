@@ -6,6 +6,7 @@ import fetchAllImageProducts from "./fetchAllImageProducts.js";
 import footer from "./footer.js";
 import header from "./header.js";
 import fetchAllProducts from "./fetchAllProducts.js";
+import header from "./header.js";
 
 
 export default function home(data = {}) {
