@@ -109,8 +109,10 @@ router
   })
   .on("/completedOrders", () => {
     changeContents(ordersCompletePage);
+  })
   .on("/searchPage", () => {
     changeContents(searchPage);
+  })
   .on("/checkout", () => {
     changeContents(checkout);
   })
