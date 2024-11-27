@@ -1,5 +1,10 @@
 import { ce } from "../Utils/create-element";
+import { router } from "../routes/router";
+
 export default function header() {
+  function goToWhishList() {
+    router.navigate("/cardElementWishList");
+  }
   let header = ce("div", {
     className: "w-full flex justify-between items-center m-5",
     children: [
@@ -16,7 +21,7 @@ export default function header() {
             ],
           }),
           ce("div", {
-            className:"font-bold text-sm leading-4 flex flex-col gap-2",
+            className: "font-bold text-sm leading-4 flex flex-col gap-2",
             children: [
               ce("h2", {
                 innerText: "Good Morning 👋",
@@ -29,7 +34,7 @@ export default function header() {
         ],
       }),
       ce("div", {
-        className:"flex flex-row gap-4 text-xl cursor-pointer",
+        className: "flex flex-row gap-4 text-xl cursor-pointer",
         children: [
           ce("div", {
             children: [
@@ -42,6 +47,9 @@ export default function header() {
             children: [
               ce("i", {
                 className: "fa-regular fa-heart  hover:text-[#EAEAEA]",
+                events: {
+                  click: goToWhishList,
+                },
               }),
             ],
           }),
