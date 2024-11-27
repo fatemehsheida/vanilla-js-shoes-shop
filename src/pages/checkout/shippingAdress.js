@@ -3,6 +3,7 @@ import header from "../../components/checkout/checkout-header";
 import shipingNav from "../../components/checkout/checkout-shipping";
 import { router } from "../../routes/router";
 import { ce } from "../../Utils/create-element";
+
 export default function shippingAdressPage() {
   //events--------------------------
   function goToShipping() {
@@ -11,6 +12,7 @@ export default function shippingAdressPage() {
   function backToCheckout() {
     router.navigate("/checkout");
   }
+
   let MainPage = ce("div", {
     className:
       " w-full h-screen px-6 relative py-6 flex flex-col justify-between items-center",
@@ -43,5 +45,6 @@ export default function shippingAdressPage() {
       }),
     ],
   });
+
   return MainPage;
 }

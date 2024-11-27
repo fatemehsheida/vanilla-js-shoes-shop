@@ -9,10 +9,10 @@ export default function shippingTypePage() {
   function goToShipping() {
     router.navigate("/shippingAdress");
   }
-
   function goToCheckoutPay() {
     router.navigate("/checkoutPay");
   }
+
   let MainPage = ce("div", {
     className:
       " w-full h-screen px-6 relative py-6 flex flex-col justify-between items-center",

@@ -5,6 +5,7 @@ export default function header() {
   function goToWhishList() {
     router.navigate("/cardElementWishList");
   }
+
   let header = ce("div", {
     className: "w-full flex justify-between items-center m-5",
     children: [
@@ -27,7 +28,7 @@ export default function header() {
                 innerText: "Good Morning 👋",
               }),
               ce("h2", {
-                innerText: "Ftm sheida",
+                innerText: "Ftm Sheida",
               }),
             ],
           }),

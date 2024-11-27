@@ -3,6 +3,7 @@ import { router } from "../../routes/router";
 import { ce } from "../../Utils/create-element";
 import fe from "../../Utils/findElements";
 import header from "./../../components/checkout/checkout-header";
+
 export default function paymentMethodPage() {
   //events------------------
   function successMessage() {
@@ -35,6 +36,7 @@ export default function paymentMethodPage() {
                   innerText: "you have successfully mode order",
                   className: "text-slate-500 text-lg text-center",
                 }),
+
                 ce("div", {
                   className: "flex flex-col  justify-end gap-4 w-full ",
                   children: [
@@ -61,10 +63,12 @@ export default function paymentMethodPage() {
     //for showing confarmation----------------------------
     document.body.appendChild(confirmationDialog);
   }
+
   function goToOrder() {
     fe("successMessage").remove();
     router.navigate("/cart");
   }
+
   let main = ce("div", {
     className: "w-full h-screen px-6 py-6 flex flex-col justify-between",
     children: [
