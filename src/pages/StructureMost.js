@@ -19,7 +19,8 @@ export default function most() {
       }),
     ],
   });
-
+  
+  
   let titlesContainer = ce("div", {
     className:
       "w-full flex  flex-row justify-start items-center gap-3 overflow-x-auto ",
@@ -39,6 +40,7 @@ export default function most() {
       }),
     ],
   });
+
   getProductsLogo().then((logos) => {
     logos.forEach((logo) => {
       let mostTitleElements = mostTitle(logo);

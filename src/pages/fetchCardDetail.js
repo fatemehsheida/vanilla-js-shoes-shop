@@ -7,7 +7,6 @@ import { router } from "../routes/router.js";
 import fetchCardById from "../api/fetchCardById.js";
 import addData from "../Utils/addData.js";
 import addDataToWhishList from "../Utils/addDataToWhish.js";
-
 // function check(e){
 //     let classEl=e.target.className;
 //     e.target.className=" ";
@@ -19,7 +18,7 @@ function createSize(product) {
     let clickedSize = e.target.innerText;
     localStorage.setItem("orderedSize", JSON.stringify(clickedSize));
   }
-
+  //closure reading ------------
   let sizeContainer = ce("div", {
     className: "w-full flex flex-row justify-center items-center gap-2",
   });

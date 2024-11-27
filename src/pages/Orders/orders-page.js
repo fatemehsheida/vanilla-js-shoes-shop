@@ -10,19 +10,6 @@ import cardCompletedOrder from "../../components/cardCompletedOrder";
 import { router } from "../../routes/router";
 
 function checkDataBase() {
-  fetch("http://localhost:5173/basket")
-    .then((res) => res.json())
-    .then((data) => {
-      if (data && Object.keys(data).length === 0) {
-        EmptyOrderPage();
-      } else {
-        cardActiveOrder();
-      }
-    });
-  return checkDataBase;
-}
-
-function checkDataBase() {
   let test = ce("div", {
     className: "w-full h-full bg-slate-50 overflow-y-scroll ",
   });
@@ -90,7 +77,6 @@ export default function ordersPage() {
           }),
         ],
       }),
-
       //show ordered products----------------------
       checkDataBase(),
 
@@ -98,5 +84,6 @@ export default function ordersPage() {
       footerCart(),
     ],
   });
+
   return ordersPage;
 }

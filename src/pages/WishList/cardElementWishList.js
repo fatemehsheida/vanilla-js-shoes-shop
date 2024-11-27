@@ -5,7 +5,6 @@ import header from "../../components/checkout/checkout-header";
 import navbarTitle from "../../components/navbarTitle";
 import { router } from "../../routes/router";
 import unlike from "./../../Utils/unlike";
-
 function showCardDetail(e) {
   let endpoint = e.target.id.toString();
   router.navigate(`card/${endpoint}`);
@@ -15,7 +14,6 @@ function unlikeData(e) {
   unlike(endpoint);
   location.reload();
 }
-
 export default function cardElementWishList() {
   let titlesContainer = ce("div", {
     className:
@@ -44,12 +42,14 @@ export default function cardElementWishList() {
     });
     main.append(titlesContainer);
   });
+
   let main = ce("div", {
     className: "w-full h-screen  px-6 py-3 flex flex-col gap-5",
     children: [
       header("Wish List", true, "fa-solid fa-magnifying-glass", "home"),
     ],
   });
+
   fetch("http://localhost:5173/wishList")
     .then((res) => res.json())
     .then((data) => {
@@ -59,6 +59,7 @@ export default function cardElementWishList() {
       });
       data.forEach((products) => {
         let product = products["0"];
+
         let card = ce("div", {
           className:
             "cardContainer w-[45%] h-74 flex flex-col justify-center items-start gap-3 ",
@@ -120,6 +121,7 @@ export default function cardElementWishList() {
                         }),
                       ],
                     }),
+
                     ce("div", {
                       className:
                         "w-1/4  bg-slate-200 rounded-lg flex justify-center items-centers py-1",
@@ -133,6 +135,7 @@ export default function cardElementWishList() {
                     }),
                   ],
                 }),
+
                 ce("p", {
                   className: "productPrice font-semibold text-base leading-5",
                   innerText: `$ ${product.price}.00`,

@@ -1,16 +1,18 @@
 import header from "../../components/checkout/checkout-header";
 import orderList from "../../components/checkout/checkout-orderList";
-import { ce } from "../../Utils/create-element";
 import shipingAddressNav from "../../components/checkout/checkout-shipping";
 import shippingTypeNav from "../../components/checkout/checkout-shippingType";
-import fe from "../../Utils/findElements";
 import { router } from "../../routes/router";
+import { ce } from "../../Utils/create-element";
+import fe from "../../Utils/findElements";
+import clog from "../../Utils/logdata";
 
 export default function checkout() {
   function goToChoose() {
     fe("errorMessage").remove();
     router.navigate("/shippingType");
   }
+
   function error() {
     let confirmationDialog = ce("div", {
       children: [
@@ -35,6 +37,7 @@ export default function checkout() {
                   className: "text-xl font-bold mb-4 text-center",
                   innerText: "Please choose the shipping type ",
                 }),
+
                 ce("div", {
                   className: "flex flex-col  justify-end gap-4 w-full ",
                   children: [

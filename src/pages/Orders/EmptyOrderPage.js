@@ -1,6 +1,5 @@
-import { ce } from "../../Utils/create-element";
-
 //empty order
+import { ce } from "../../Utils/create-element";
 export default function EmptyOrderPage() {
   let EmptyOrder = ce("div", {
     className:

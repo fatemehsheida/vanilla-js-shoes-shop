@@ -1,4 +1,5 @@
 import {ce} from "../Utils/create-element.js";
+
 export default function fetchByTitle({data}){
     let test=ce("div",{
         className:"w-full h-full bg-sky-800 rounded",

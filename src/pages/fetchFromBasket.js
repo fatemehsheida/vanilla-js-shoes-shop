@@ -3,7 +3,7 @@ import getProductsList from "../api/products.api.js";
 import cardElementPayment from "../components/cardElementPayment.js";
 import fetchFromBasket from "../api/basket.api.js";
 import paymentCart from "../components/paymentcrat.js";
-
+import clog from "../Utils/logdata.js";
 
 export default function fetchCardFromBasket() {
   let basketCardsContainer = ce("div", {

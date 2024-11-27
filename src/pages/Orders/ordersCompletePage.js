@@ -9,6 +9,7 @@ import cardActiveOrder from "../../components/cardActiveOrder";
 import cardCompletedOrder from "../../components/cardCompletedOrder";
 import { router } from "../../routes/router";
 import cardCompleredOrder from "../../components/cardCompletedOrder";
+
 function checkDataBase() {
   let test = ce("div", {
     className: "w-full h-full bg-slate-50  flex flex-col overflow-y-scroll",
@@ -27,6 +28,7 @@ function checkDataBase() {
     });
   return test;
 }
+
 export default function ordersCompletePage() {
   //div contain hole page of orders
   let ordersPage = ce("div", {
@@ -73,9 +75,11 @@ export default function ordersCompletePage() {
       }),
       //show ordered products----------------------
       checkDataBase(),
+
       //footer----------------------------------------
       footerCart(),
     ],
   });
+
   return ordersPage;
 }
