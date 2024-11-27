@@ -16,6 +16,9 @@ import fetchCardByImage from "../api/fetchCardByImage.js";
 import fetchCardDetail from "../pages/fetchCardDetail";
 import payment from "../pages/payment.js";
 import ordersPage from "../pages/Orders/orders-page.js";
+import cardCompleredOrder from "../components/cardCompletedOrder.js";
+import cardActiveOrder from "../components/cardActiveOrder.js";
+import ordersCompletePage from "../pages/Orders/ordersCompletePage.js";
 
 export const router = new Navigo("/");
 const changeContents3 = (data, data) => {
@@ -87,4 +90,10 @@ router
   })
   .on("/cart", () => {
     changeContents(ordersPage);
+  })
+  .on("/cardActiveOrder", () => {
+    changeContents(ordersPage);
+  })
+  .on("/completedOrders", () => {
+    changeContents(ordersCompletePage);
   });
