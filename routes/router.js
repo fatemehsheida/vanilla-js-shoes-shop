@@ -16,6 +16,7 @@ import fetchCardByImage from "../api/fetchCardByImage.js";
 import fetchCardDetail from "../pages/fetchCardDetail";
 import payment from "../pages/payment.js";
 import ordersPage from "../pages/Orders/orders-page.js";
+import searchPage from "../pages/search/searchPage.js";
 import fetchCardFromBasket from "../pages/fetchFromBasket.js";
 import checkout from "../pages/checkout/checkout.js";
 import shippingAdressPage from "../pages/checkout/shippingAdress.js";
@@ -99,6 +100,8 @@ router
   .on("/cart", () => {
     changeContents(ordersPage);
   })
+  .on("/searchPage", () => {
+    changeContents(searchPage);
   .on("/checkout", () => {
     changeContents(checkout);
   })
