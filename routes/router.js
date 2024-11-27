@@ -16,6 +16,9 @@ import fetchCardByImage from "../api/fetchCardByImage.js";
 import fetchCardDetail from "../pages/fetchCardDetail";
 import payment from "../pages/payment.js";
 import ordersPage from "../pages/Orders/orders-page.js";
+import cardCompleredOrder from "../components/cardCompletedOrder.js";
+import cardActiveOrder from "../components/cardActiveOrder.js";
+import ordersCompletePage from "../pages/Orders/ordersCompletePage.js";
 import searchPage from "../pages/search/searchPage.js";
 import fetchCardFromBasket from "../pages/fetchFromBasket.js";
 import checkout from "../pages/checkout/checkout.js";
@@ -27,6 +30,7 @@ import MostPopularpage from "../pages/Mostpage.js";
 import EmptyOrderPage from "../pages/Orders/EmptyOrderPage.js";
 import cardActiveOrder from "../components/cardActiveOrder.js";
 import cardCompletedOrder from "../components/cardCompletedOrder.js";
+
 
 
 export const router = new Navigo("/");
@@ -100,6 +104,11 @@ router
   .on("/cart", () => {
     changeContents(ordersPage);
   })
+  .on("/cardActiveOrder", () => {
+    changeContents(ordersPage);
+  })
+  .on("/completedOrders", () => {
+    changeContents(ordersCompletePage);
   .on("/searchPage", () => {
     changeContents(searchPage);
   .on("/checkout", () => {
