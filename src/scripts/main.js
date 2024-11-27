@@ -22,7 +22,7 @@ root.className="w-full h-screen";
 root.appendChild(App());
 router.resolve();
 let user={
-    email:"kingmasoud@gmail.com",
+    email:"ftmsheida@gmail.com",
     password:"123456789"
 };
 localStorage.setItem('user',JSON.stringify(user));
