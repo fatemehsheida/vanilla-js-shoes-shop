@@ -1,5 +1,11 @@
+import { router } from "../routes/router.js";
 import { ce } from "../Utils/create-element.js";
+
 export default function paymentCart() {
+  function goToCheckout() {
+    router.navigate("/cart");
+  }
+
   let paymentCart = ce("div", {
     className:
       "w-full h-20 flex flex-row justify-between items-center gap-0.5 cursor-pointer py-5",
@@ -16,6 +22,7 @@ export default function paymentCart() {
               }),
               ce("h5", {
                 className: "font-bold text-xl ",
+                restAttrs: { id: "totalMountPayment" },
                 innerText: `$.00`,
               }),
             ],
@@ -27,7 +34,7 @@ export default function paymentCart() {
         children: [
           ce("div", {
             className:
-              "bg-black w-full px-4 py-7  rounded-[40px] flex justify-center h-12 items-center shadow-md shadow-slate-500/50",
+              "bg-black w-full px-4 py-7 rounded-[40px] flex justify-center h-12 items-center shadow-md shadow-slate-500/50",
             children: [
               ce("div", {
                 className: "text-white flex justify-center items-center gap-3",
@@ -38,6 +45,7 @@ export default function paymentCart() {
                       ce("p", {
                         className: "text-lg font-semibold text-white",
                         innerText: "Checkout",
+                        events: { click: goToCheckout },
                       }),
                     ],
                   }),

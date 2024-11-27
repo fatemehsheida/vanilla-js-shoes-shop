@@ -1,16 +1,15 @@
 import { ce } from "../Utils/create-element.js";
-import fetchAdiddasProducts from "./fetchAdiddasProducts.js";
 import { router } from "../routes/router.js";
-
-
-export default function productFilterByLogo({ data }) {
+import MostPopular from "./StructureMost.js";
+import fetchAllProducts from "./fetchAllProducts.js";
+export default function MostPopularpage(data = {}) {
   let product = ce("div", {
     className:
       " container w-full h-full px-6 flex flex-col justify-start items-center",
     children: [
       ce("div", {
         className:
-          "w-full h-14 flex flex-row justify-start items-center gap-3 py-4 px-6",
+          "w-full h-14 flex flex-row justify-start items-center gap-3 py-4 px-2",
         children: [
           ce("i", {
             className: "fa-solid fa-backward cursor-pointer",
@@ -22,11 +21,12 @@ export default function productFilterByLogo({ data }) {
           }),
           ce("h1", {
             className: "font-bold text-xl",
-            children: [data.brand],
+            innerText: "Most Popular",
           }),
         ],
       }),
-      fetchAdiddasProducts(data.brand),
+      MostPopular(),
+      fetchAllProducts(data),
     ],
   });
   return product;
