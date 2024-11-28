@@ -1,7 +1,7 @@
 
-import {ce} from "../Utils/create-element.js";
-import getProductsList from "../api/products.api.js";
-import cardElement from "../components/card.js";
+import {ce} from "../../Utils/create-element.js";
+import getProductsList from "../../api/products.api.js";
+import cardElement from "../../components/card.js";
 
 
 export default function fetchAllProducts(data) {

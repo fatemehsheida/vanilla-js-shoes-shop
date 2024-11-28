@@ -1,7 +1,6 @@
-import { ce } from "../Utils/create-element.js";
-
-import getFooterItems from "../api/fotter.api.js";
-import footerItems from "../components/footerItems";
+import { ce } from "../../Utils/create-element.js";
+import getFooterItems from "../../api/fotter.api.js";
+import footerItems from "./footerItems.js";
 
 export default function footerCart() {
     let footerContainer = ce("div", {

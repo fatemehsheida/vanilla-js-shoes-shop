@@ -1,8 +1,8 @@
-import { ce } from "../Utils/create-element.js";
-import getProductsLogo from "../api/logo.api.js";
-import logoElements from "../components/logoElements.js";
-import navbarTitle from "../components/navbarTitle.js";
-import { router } from "../routes/router.js";
+import { ce } from "../../Utils/create-element.js";
+import getProductsLogo from "../../api/logo.api.js";
+import logoElements from "../../components/logoElements.js";
+import navbarTitle from "../../components/navbarTitle.js";
+import { router } from "../../routes/router.js";
 function allProductsByTitle(e) {
   e.target.className += "bg-[#343A40] text-white";
   let endpoint = e.target.innerText.toLowerCase();

@@ -1,5 +1,5 @@
-import { router } from "../routes/router.js";
-import { ce } from "../Utils/create-element.js";
+import { router } from "../../routes/router.js";
+import { ce } from "../../Utils/create-element.js";
 
 export default function paymentCart() {
   function goToCheckout() {

@@ -1,7 +1,7 @@
-import { ce } from "../Utils/create-element.js";
-import { router } from "../routes/router.js";
+import { ce } from "../../Utils/create-element.js";
+import { router } from "../../routes/router.js";
 import MostPopular from "./StructureMost.js";
-import fetchAllProducts from "./fetchAllProducts.js";
+import fetchAllProducts from "../home/fetchAllProducts.js";
 
 export default  function MostPopularpage(data={}) {
   let product =  ce("div", {

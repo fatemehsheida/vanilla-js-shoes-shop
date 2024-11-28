@@ -1,7 +1,7 @@
-import searchItem from "../../components/searchitem";
-import fetchFromBasket from "../fetchFromBasket";
+import searchItem from "../../components/payment/searchitem";
+import fetchFromBasket from "../payment/fetchFromBasket";
 import { ce } from "../../Utils/create-element";
-import footerCart from "../../components/footerCart";
+import footerCart from "../../components/payment/footerCart";
 import input from "./../../components/input";
 import clog from "../../Utils/logdata";
 import EmptyOrderPage from "./EmptyOrderPage";

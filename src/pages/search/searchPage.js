@@ -1,4 +1,4 @@
-import searchInput from "../../components/searchInput";
+import searchInput from "../../components/home/searchInput";
 import { router } from "../../routes/router";
 import fe from "../../Utils/findElements";
 import clog from "../../Utils/logdata";

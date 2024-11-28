@@ -1,4 +1,4 @@
-import { ce } from "../Utils/create-element.js";
+import { ce } from "../../Utils/create-element.js";
 
 export default function searchItem(str) {
   let searchitem = ce("div", {

@@ -1,6 +1,6 @@
-import {ce} from "../Utils/create-element.js";
-import clog from "../Utils/logdata.js";
-import {router} from "../routes/router.js";
+import {ce} from "../../Utils/create-element.js";
+import clog from "../../Utils/logdata.js";
+import {router} from "../../routes/router.js";
 
 
 function routeToOwnPage(e){

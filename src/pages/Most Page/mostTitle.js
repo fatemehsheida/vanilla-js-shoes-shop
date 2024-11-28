@@ -1,6 +1,6 @@
-import {ce} from "../Utils/create-element.js";
-import {router} from "../routes/router.js";
-import MostPopularpage from "../pages/Mostpage.js";
+import {ce} from "../../Utils/create-element.js";
+import {router} from "../../routes/router.js";
+import MostPopularpage from "../Most Page/Mostpage.js";
 
 
 

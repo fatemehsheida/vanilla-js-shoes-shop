@@ -1,7 +1,6 @@
 import fetchFromBasket from "../../api/basket.api";
 import { router } from "../../routes/router";
 import { ce } from "../../Utils/create-element";
-import clog from "../../Utils/logdata";
 import cardElementPayment from "../confirmationDeleteCard";
 
 export default function orderList() {

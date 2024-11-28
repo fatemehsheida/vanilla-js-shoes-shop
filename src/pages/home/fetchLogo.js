@@ -1,7 +1,7 @@
-import { ce } from "../Utils/create-element.js";
-import cardElement from "../components/card.js";
-import getProductsLogo from "../api/logo.api.js";
-import logoElements from "../components/logoElements.js";
+import { ce } from "../../Utils/create-element.js";
+import cardElement from "../../components/card.js";
+import getProductsLogo from "../../api/logo.api.js";
+import logoElements from "../../components/logoElements.js";
 
 export default function fetchAllLogo() {
   let logoContainer = ce("div", {

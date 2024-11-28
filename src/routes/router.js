@@ -11,20 +11,20 @@ import productFilterByLogo from "../pages/filterByLogoProducts.js";
 import login from "../pages/login.js";
 
 //import home
-import home from "../pages/home.js";
+import home from "../pages/home/home.js";
 import fe from "../Utils/findElements.js";
 import fetchByTitle from "../pages/fetchByTitle.js";
 import fetchCardByImage from "../api/fetchCardByImage.js";
 import fetchCardDetail from "../pages/fetchCardDetail";
-import payment from "../pages/payment.js";
+import payment from "../pages/payment/payment.js";
 import ordersPage from "../pages/Orders/orders-page.js";
-import fetchCardFromBasket from "../pages/fetchFromBasket.js";
+import fetchCardFromBasket from "../pages/payment/fetchFromBasket.js";
 import checkout from "../pages/checkout/checkout.js";
 import shippingAdressPage from "./../pages/checkout/shippingAdress";
 import shippingTypePage from "./../pages/checkout/shippingType";
 import checkoutBeforePay from "./../pages/checkout/checkout-before-pay";
 import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
-import MostPopularpage from "../pages/Mostpage.js";
+import MostPopularpage from "../pages/Most Page/Mostpage.js";
 import cardElementWishList from "../pages/WishList/cardElementWishList.js";
 import searchPage from "../pages/search/searchPage.js";
 import cardCompleredOrder from "../components/cardCompletedOrder.js";

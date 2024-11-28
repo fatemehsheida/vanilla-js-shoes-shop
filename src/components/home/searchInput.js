@@ -1,13 +1,12 @@
-import { ce } from "../Utils/create-element.js";
-import fe from "../Utils/findElements.js";
-import clog from "../Utils/logdata.js";
-import input from "./input.js";
+import { ce } from "../../Utils/create-element.js";
+import fe from "../../Utils/findElements.js";
+import input from "../input.js";
 
 export default function searchInput() {
   function getInputValue() {
     let endpoint = fe("searchBox").value;
     localStorage.setItem("searchKey", endpoint);
-    location.reload();
+    // location.reload();
   }
 
   let searchInput = ce("div", {

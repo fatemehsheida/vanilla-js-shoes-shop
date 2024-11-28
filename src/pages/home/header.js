@@ -1,5 +1,5 @@
-import { ce } from "../Utils/create-element";
-import { router } from "../routes/router";
+import { ce } from "../../Utils/create-element";
+import { router } from "../../routes/router";
 
 export default function header() {
   function goToWhishList() {
